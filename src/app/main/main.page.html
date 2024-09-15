@@ -1,0 +1,93 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar color="light"  >
+    <ion-grid fixed="true">
+
+      <ion-row style="  margin-right: auto; margin-left: auto;">
+        <ion-col size="auto" style="  margin-right: auto; margin-left: auto;">
+          <h1>นาย ธนนนท สมศิริ</h1>
+          <h2 style="  margin-right: auto; margin-left: auto;">U663147</h2>
+        </ion-col>
+
+        <ion-button    click="myBackButton(this.f)"  color="light" size="small" style="  margin-right: auto; margin-left: auto;"><ion-card 
+             color="light">
+            <ion-card-header>
+
+              <ion-card-title size="auto"> <ion-icon name="ellipsis-vertical-outline"></ion-icon></ion-card-title>
+              <ion-card-subtitle size="auto">ติดต่อเรา</ion-card-subtitle>
+
+            </ion-card-header>
+          </ion-card>
+        </ion-button>
+
+      </ion-row>
+
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content [fullscreen]="true" color="dark" >
+
+
+  <ion-datetime color="success"></ion-datetime>
+
+
+
+  <ion-button color="danger" style=" margin-right: auto; margin-left: auto;
+  margin-top:  3em;
+  width:184px;
+  height: 184px;
+
+  border-radius: 50%;
+  font-size:28px;
+
+  text-align: center;
+  background: rgb(239, 168, 168);" id="trigger-button" shape="round" expand="block" >
+    <p>กดเพื่อบันทึก</p>
+
+    <ion-popover size="auto"  alignment="center"  [dismissOnSelect]="true"  trigger="trigger-button">
+      <ng-template>
+        <ion-content class="ion-padding">
+
+       
+          <ion-grid>
+            <ion-row>
+              <ion-col> <ion-button id="present-alert"   shape="round" style=" 
+ margin-right: auto; margin-left: auto;
+          width:64px;
+          height: 64px;
+          border: black 4px;
+          border-radius: inherit; 
+          font-size:18px;
+          position: absolute; 
+          text-align: center;
+       " color="light" >รายรับ</ion-button><ion-alert trigger="present-alert" header="รายรับ" 
+                  [buttons]="alertButtons"  [inputs]="alertInputs"></ion-alert></ion-col>
+              <ion-col> <ion-button style="
+ margin-right: auto; margin-left: auto;
+ width:64px;
+ height: 64px;
+          border-radius: 50%;
+          font-size:18px;
+        
+          text-align: center;
+       "  id="present-alert2" shape="round" color="light">รายจ่าย</ion-button> <ion-alert
+                  trigger="present-alert2" header="รายจ่าย" [buttons]="alertButtons2"
+                  [inputs]="alertInputs2"></ion-alert></ion-col>
+            </ion-row>
+          </ion-grid>
+<ion-item [button]="true" ArrowDown="true" style="
+margin-right: auto; margin-left: auto;
+width:64px;
+height: 64px;
+
+         font-size:18px;
+       
+         text-align: center;" [detail]="false" color="success">ออก</ion-item>
+    
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+
+  </ion-button>
+
+</ion-content>
